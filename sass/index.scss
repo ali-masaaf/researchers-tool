@@ -1,0 +1,287 @@
+/*
+* Global styling 
+*/
+
+$poppins: (
+    "poppins-light": '/fonts/poppins/Poppins-Light.ttf',
+    "poppins-medium": '/fonts/poppins/Poppins-Medium.ttf',
+    "poppins-regular": '/fonts/poppins/Poppins-Regular.ttf',
+    "poppins-semiBold": '/fonts/poppins/Poppins-SemiBold.ttf',
+    "poppins-bold": '/fonts/poppins/Poppins-Bold.ttf',
+    "poppins-extraBold": '/fonts/poppins/Poppins-ExtraBold.ttf'
+);
+
+$roboto: (
+    "roboto-light": '/fonts/roboto/Roboto-Light.ttf',
+    "roboto-medium": '/fonts/roboto/Roboto-Medium.ttf',
+    "roboto-regular": '/fonts/roboto/Roboto-Regular.ttf',
+    "roboto-bold": '/fonts/roboto/Roboto-Bold.ttf',
+    "roboto-extraBold": '/fonts/roboto/Roboto-Black.ttf'
+);
+
+
+@each $name, $url in $poppins {
+    @font-face {
+        font-family: $name;
+        src: url($url);
+    }
+}
+
+@each $name, $url in $roboto {
+    @font-face {
+        font-family: $name;
+        src: url($url);
+    }
+}
+
+html{
+    height: 100%;
+    width: 100%;    
+    filter: drop-shadow(0 0 0 white);
+
+}
+
+body{
+    position: relative;
+    background-color: #EFF2F9;
+    font-family: poppins-light;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+ul, p{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*
+* Grid layout
+*/
+
+/*
+* FlexBox layout
+*/
+
+.header_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.6rem;
+    
+}
+
+.researchers-tool_hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.researchers-tool_main{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+/*
+* background styling
+*/
+.researchers-tool_background{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.background_aurora-1{
+    position: absolute;
+    top: -7rem;
+    right: -5rem;
+    height: 18.5rem;
+    width: 18.5rem;
+    border-radius: 100%;
+    background: linear-gradient(122.89deg, #FFFFFF 20.06%, #FFA72E 84.31%);
+    opacity: 0.5;
+    filter: blur(65px);
+
+}
+.background_aurora-2{
+    position: absolute;
+    width: 28rem;
+    height:28rem;
+    left: 34rem;
+    top: -11rem;
+    background: linear-gradient(122.89deg, #FFFFFF 20.06%, #2EFFF2 84.31%);
+    opacity: 0.2;
+    filter: blur(176px);
+    border-radius: 100%;
+}
+.background_aurora-3{
+    position: absolute;
+    width: 21vw;
+    height: 21vw;
+    left: 18vw;
+    top: -10vw;
+    background: linear-gradient(122.89deg, #FFFFFF 20.06%, #FFE880 84.31%);
+    filter: blur(85px);
+    border-radius: 100%;
+}
+.background_aurora-4{
+    position: absolute;
+    width: 22vw;
+    height: 22vw;
+    left: -10vw;
+    top: -1vw;
+    background: linear-gradient(122.89deg, #FFFFFF 20.06%, #FFE280 84.31%);
+    opacity: 0.65;
+    filter: blur(50px);
+    border-radius: 100%;
+}
+
+/*
+* Header styling
+*/
+
+.researchers-tool_header{
+    position: relative;
+    width: 100%;
+    height: 4.77rem;
+    z-index: 2;
+}
+
+.header_background{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(239,242,249,0.42);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: -1;
+}
+
+.header_background::after{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    margin-left: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.16);
+    z-index: 2;
+
+}
+
+.header_items{
+    list-style-type: none;
+    width: 100%;
+    font-size: 0.9rem;
+    padding-top: 2.65rem;
+    text-align: center;
+    *{
+        display: inline;
+    }
+}
+
+/*
+* Hero section styling
+*/
+
+.researchers-tool_hero-section{
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    z-index: 1;
+    margin-top: 4.5rem;
+}
+
+.hero-section_line-1{
+   position: relative; 
+   width: 47.5rem;
+}  
+
+.line-1_text{
+    display: inline-block;
+    font-size: 5rem;
+    font-family: poppins-medium;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #00071A;
+}
+
+.line-1_icon{
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    position: relative;
+    top: 1.3rem;
+    right: -1.4rem;
+    background-image: url('/icons/face_savoring _food.svg');
+    background-repeat: no-repeat;
+
+    }
+
+.hero-section_line-2{
+    font-size: 3.090rem;
+    font-family: poppins-regular;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 74px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #00071A;
+}
+
+/*
+* Main section styling
+*/
+
+.researchers-tool_main{
+    margin: 4.5rem 3.1rem 0 3.1rem;
+}
+
+.main_left-section{
+    width: calc(50vw - 3.1rem);;
+    height: calc(50vw - 3.1rem);;
+    background-color: cadetblue;
+    border-radius: 3.1rem;
+}
+
+.main_right-section{
+    width: calc(50vw - 3.1rem);
+    height: calc(50vw - 3.1rem);;
+    background-color: cadetblue;
+}
+
+/*
+* Footer styling
+*/
+
+
+
