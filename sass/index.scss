@@ -60,8 +60,6 @@ body{
 
 }
 
-
-
 ol{
     list-style-type: none;
     counter-reset: item;
@@ -181,6 +179,7 @@ li li:before{
     display: flex;
     justify-content: flex-end;
 }
+
 
 
 /*
@@ -415,8 +414,33 @@ li li:before{
 .main_right-section{
     position: relative;
     width: calc(50vw - 6.4em);
-    height: calc(50vw - 6.4rem);
-    overflow: scroll;
+    height: calc(50vw - 8.3rem)
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+
+}
+
+.main_right-section::-webkit-scrollbar {
+    width: 0.2rem;
+
+}
+
+.main_right-section::-webkit-scrollbar-track {
+    border-radius: 100rem;
+    background-color: #00071A;
+    border: 0.01rem solid transparent;
+    background-clip: content-box;
+  }
+  
+
+.main_right-section::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 100rem;
+    background-color: transparent;
+    border-top: 5rem solid #000000 /*or any height and color you want*/;
 }
 
 .right-section_actions{
@@ -427,7 +451,6 @@ li li:before{
     width: 8rem;
 
 }
-
 
 .actions_download{
     display: inline-block;
@@ -448,6 +471,13 @@ li li:before{
     background-repeat: no-repeat;
 
 }
+
+.right-section_document{
+
+    margin-right: 3.1rem;
+}
+
+
 
 /*
 * Footer styling
