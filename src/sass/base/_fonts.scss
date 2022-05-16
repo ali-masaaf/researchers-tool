@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+
+$poppins: (
+    "poppins-extrLight": '/fonts/poppins/Poppins-ExtraLight.ttf',
+    "poppins-light": '/fonts/poppins/Poppins-Light.ttf',
+    "poppins-medium": '/fonts/poppins/Poppins-Medium.ttf',
+    "poppins-regular": '/fonts/poppins/Poppins-Regular.ttf',
+    "poppins-semiBold": '/fonts/poppins/Poppins-SemiBold.ttf',
+    "poppins-bold": '/fonts/poppins/Poppins-Bold.ttf',
+    "poppins-extraBold": '/fonts/poppins/Poppins-ExtraBold.ttf'
+);
+
+$roboto: (
+    "roboto-thin": '/fonts/roboto/Roboto-Thin.ttf',
+    "roboto-light": '/fonts/roboto/Roboto-Light.ttf',
+    "roboto-medium": '/fonts/roboto/Roboto-Medium.ttf',
+    "roboto-regular": '/fonts/roboto/Roboto-Regular.ttf',
+    "roboto-bold": '/fonts/roboto/Roboto-Bold.ttf',
+    "roboto-extraBold": '/fonts/roboto/Roboto-Black.ttf'
+);
+
+
+@each $name, $url in $poppins {
+    @font-face {
+        font-family: $name;
+        src: url($url);
+    }
+}
+
+@each $name, $url in $roboto {
+    @font-face {
+        font-family: $name;
+        src: url($url);
+    }
+}

@@ -1,8 +1,8 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="./css/index.css">
-    </head>
-    <body class="researchers-tool">
+import './sass/main.scss';
+
+function App() {
+  return (
+    <div class="root_researchers-tool">
         <script src="./js/index.js"></script>
         <div class="researchers-tool_background">
             <div class="background_aurora-1"></div>
@@ -39,7 +39,7 @@
                     <br/>
                     All The Files Here
                 </h2>
-                <input  class="left-section_add-button" type="button">
+                {/*<input  class="left-section_add-button" type="button"></input>*/}
             </section>
             <section class="main_right-section">
                 <div class="right-section_actions">
@@ -98,5 +98,8 @@
         <footer class="researchers-tool_footer">
             <div class="footer_text-1">Made with</div> <i class="footer_icon-hart"></i><div class="footer_text-2">©2022</div>
         </footer>
-    </body>
-</html>
+    </div>
+  );
+}
+
+export default App;

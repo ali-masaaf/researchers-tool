@@ -1,0 +1,40 @@
+.header_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.6rem;
+    
+}
+
+.researchers-tool_hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.researchers-tool_main{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main_left-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.researchers-tool_footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+
+}
+
+.right-section_actions{
+    display: flex;
+    justify-content: flex-end;
+}

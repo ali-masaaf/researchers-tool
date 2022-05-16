@@ -1,0 +1,127 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+html{
+  height: 100%;
+  width: 100%;    
+  filter: drop-shadow(0 0 0 white);
+
+}
+
+body{
+  position: relative;
+  background-color: #EFF2F9;
+  font-family: poppins-light;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+ol{
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+[class$="section_titel"]{
+  font-family: roboto-medium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 47px;
+}
+
+li{
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+
+  font-family: roboto-medium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 47px;
+
+}
+
+li:before{
+  content: counters(item, ".") /*". "*/;
+  display: table-cell;
+  padding-right: 0.4rem;    
+}
+
+li li{
+  margin: 0;
+
+  font-family: roboto-medium;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 38px;
+  /* identical to box height, or 165% */
+
+
+  color: #00071A;
+
+}
+
+p{
+  font-size: 1rem;
+  font-family: roboto-regular;
+  line-height:  31px;
+  margin-left: 2rem;
+}
+
+li li:before{
+  content: counters(item, ".") " ";
+
+  /* identical to box height, or 165% */
+
+  font-family: roboto-medium;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 38px;
+  color: #00071A;
+
+}
