@@ -25,6 +25,11 @@
     align-items: center;
 }
 
+.left-section_files{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .researchers-tool_footer{
     display: flex;
     flex-direction: row;
