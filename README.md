@@ -1,5 +1,13 @@
 # researchers-tool
 
+Researchers tool is a tool that aims to help researchers with thesis writing phase, I started this project basically to help my friend on his Phd preparation, and suport him in the way I know.
+<br/>
+The first release will provide the service of collecting the informations - title, abstract, author, year of publication... -  from multiple pdf files and structure it to make it ready to integrate in the thesis directly, normally the researchers are doing this process manually, so the tool automate this task for the them.
+
+---
+
+![image](https://drive.google.com/uc?export=view&id=1sm8_KsvCSLTTEBTcnsJhiAW1tEzthj-r)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
